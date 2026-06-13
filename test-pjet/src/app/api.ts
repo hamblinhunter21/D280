@@ -10,8 +10,8 @@ export class Api {
 
   
 
-getCountryInformation(countryId: string): Observable<any> {
-  const apiUrl = `http://api.worldbank.org/v2/country/${countryId}?format=json`;
+getCountryInformation(countryId?: string): Observable<any> {
+  const apiUrl = countryId ? `http://api.worldbank.org/v2/country/${countryId}?format=json` : `http://api.worldbank.org/v2/country?format=json`;
   return this.http.get(apiUrl);
   
 }
