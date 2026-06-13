@@ -1,0 +1,6 @@
+path {
+  fill: gray;
+}
+path:hover {
+  fill: rgb(245, 123, 8);
+}
