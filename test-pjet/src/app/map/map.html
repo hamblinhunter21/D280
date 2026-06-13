@@ -1,7 +1,7 @@
-<div style="display: flex; gap: 0px; height: 500px;">
+<div class="container">
 
-    <div class="map-layout"></div>
-    <div style="flex: 2; border: 5px solid #060000; overflow: auto;">
+    
+    <div class="map-container" >
         <div class="map-pane">
             <svg
               #mapSvg
@@ -1063,8 +1063,8 @@
      id="ZW" />
 </svg>
 
-<div style="flex: 1; padding: 20px; border-left: 1px solid #ccc; overflow-y: auto;">
-      <div *ngIf="selectedCountry">
+<div class="info-panel">
+      <div>
         <h2>{{ selectedCountry.name }}</h2>
         <p><strong>Capital:</strong> {{ selectedCountry.capital }}</p>
         <p><strong>Region:</strong> {{ selectedCountry.region }}</p>
@@ -1072,9 +1072,7 @@
         <p><strong>Longitude:</strong> {{ selectedCountry.longitude }}</p>
         <p><strong>Latitude:</strong> {{ selectedCountry.latitude }}</p>
       </div>
-      <ng-template #prompt>
-        <p>Click a country on the map to see details.</p>
-      </ng-template>
     </div>
   
   </div>
+  
