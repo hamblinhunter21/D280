@@ -1,4 +1,4 @@
-<div style="display: flex; gap: 20px; height: 500px;">
+<div style="display: flex; gap: 0px; height: 500px;">
 
     <div class="map-layout"></div>
     <div style="flex: 2; border: 5px solid #060000; overflow: auto;">
@@ -1062,3 +1062,19 @@
      title="Zimbabwe"
      id="ZW" />
 </svg>
+
+<div style="flex: 1; padding: 20px; border-left: 1px solid #ccc; overflow-y: auto;">
+      <div *ngIf="selectedCountry">
+        <h2>{{ selectedCountry.name }}</h2>
+        <p><strong>Capital:</strong> {{ selectedCountry.capital }}</p>
+        <p><strong>Region:</strong> {{ selectedCountry.region }}</p>
+        <p><strong>Income Level:</strong> {{ selectedCountry.incomeLevel }}</p>
+        <p><strong>Longitude:</strong> {{ selectedCountry.longitude }}</p>
+        <p><strong>Latitude:</strong> {{ selectedCountry.latitude }}</p>
+      </div>
+      <ng-template #prompt>
+        <p>Click a country on the map to see details.</p>
+      </ng-template>
+    </div>
+  
+  </div>

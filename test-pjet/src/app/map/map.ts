@@ -1,9 +1,10 @@
 import { Component,OnInit, AfterViewInit, ElementRef, ViewChild, Output, EventEmitter } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { Api } from '../api';
 
 @Component({
   selector: 'app-map',
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './map.html',
   styleUrl: './map.css',
 })
